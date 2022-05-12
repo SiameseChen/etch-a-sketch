@@ -19,3 +19,7 @@
   height: 6.25vh;
   margin: 0;
 }
+
+.grid-column:hover {
+  background-color: aqua;
+}
