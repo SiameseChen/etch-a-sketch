@@ -1,0 +1,21 @@
+#grid-area {
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  flex-direction: row;
+  margin: 0;
+}
+
+.grid-row {
+  width: 6.25vw;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  margin: 0;
+}
+
+.grid-column {
+  width: 6.25vw;
+  height: 6.25vh;
+  margin: 0;
+}
