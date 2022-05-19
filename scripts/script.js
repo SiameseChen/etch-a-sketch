@@ -7,10 +7,28 @@ function createSquareGrid(gridNumber = 16) {
     for(let i = 0; i < gridNumber; i++) { // Loop 16 times inside previous for loop
       let divRow = document.createElement('div'); // Create Div element for rows
       divRow.setAttribute('class', 'grid-row'); // Give div class grid-row
+      divRow.addEventListener('mousedown', onClick); 
+      divRow.addEventListener('mouseover', onClick); 
+      divRow.addEventListener('mouseup', onClick)
       divColumn.appendChild(divRow); // Append grid-row onto grid-column as a child.
     }
   }
 }
+
+let mouseHold;
+
+function onClick(e) { 
+  if(e.type === 'mousedown') {
+    mouseHold = true;
+  } else if(e.type === 'mouseup') {
+    mouseHold = false;
+  }
+  if(e.type === 'mouseover' && !mouseHold) {
+    return;
+  } else {
+    e.target.style.backgroundColor = 'black';
+  }
+} 
 
 createSquareGrid(); // Run function
 
@@ -37,9 +55,3 @@ function promptNumber() {
   console.log(gridNumber);
   createSquareGrid(gridNumber);
   }
-
-  const paintInteract = document.querySelector('#grid-area');
-  paintInteract.addEventListener('click', function onClick(e) {
-    console.log(e);
-    e.target.style.backgroundColor = 'black';
-  });
