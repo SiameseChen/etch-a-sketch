@@ -1,25 +1,29 @@
 #grid-area {
-  height: 100vh;
-  width: 100vw;
   display: flex;
   flex-direction: row;
-  margin: 0;
-}
-
-.grid-row {
-  width: 6.25vw;
-  height: 100vh;
-  display: flex;
-  flex-direction: column;
-  margin: 0;
+  width: 640px;
+  height: 640px;
+  margin-left: 0px;
+  border: black solid 3px;
+  align-self: center;
+  justify-self: center;
 }
 
 .grid-column {
-  width: 6.25vw;
-  height: 6.25vh;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.grid-row {
+  width: 100%;
+  height: 10vh;
   margin: 0;
 }
 
-.grid-column:hover {
-  background-color: aqua;
+.grid-row:hover {
+  background-color: black;
+  width: 100%;
+  margin: 0px;
 }

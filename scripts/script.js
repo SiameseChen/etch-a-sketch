@@ -37,3 +37,9 @@ function promptNumber() {
   console.log(gridNumber);
   createSquareGrid(gridNumber);
   }
+
+  const paintInteract = document.querySelector('#grid-area');
+  paintInteract.addEventListener('click', function onClick(e) {
+    console.log(e);
+    e.target.style.backgroundColor = 'black';
+  });
